@@ -1,6 +1,7 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as t;
 .hero {
+    min-height: 100vh;
     &__content {
         padding: 70px 43px;
         height: 300px;
