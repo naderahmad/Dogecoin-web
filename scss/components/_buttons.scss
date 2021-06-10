@@ -19,6 +19,7 @@
     height: 40px;
     border: none;
     border-radius: 5px;
+    outline: none;
     margin: 15px;
     z-index: 2;
     
@@ -35,6 +36,7 @@
         font-weight: 500;
         border: 1px solid v.$color-secondary;
         margin: 0;
+        outline: none;
     }
     &--large-top {
         width: 100%;
