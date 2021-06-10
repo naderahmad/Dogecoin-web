@@ -1,0 +1,12 @@
+@use '../variables/colors-theme' as v;
+body {
+    box-sizing: border-box;
+    padding: 0;
+    background-color: v.$color-black;
+}
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

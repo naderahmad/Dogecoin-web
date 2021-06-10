@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogecoin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
+            <p class="logo__text">Dogecoin</p>
+        </div>
+        <nav class="header__navbar">
+            <!-- start menu burger button -->
+            <div class="navbar__btn">
+                <div class="navbar__burger"></div>
+            </div>
+            <!-- end menu burger button -->
+        </nav>
+    </header>
+    <!-- start particles background -->
+    <div id="particles-js"></div>
+    <!-- end of particles -->
+    <main class="main">
+        <!-- START SECTION HERO -->
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title"><span class="hero__span">1 Dogecoin =</span> 1 Dogecoin</h1>
+                <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
+                <!-- start background circle blur -->
+                <img src="./assets/images/spark.png" alt="" class="hero__spark">
+                <!-- end background circle blur -->
+                <div class="hero__btn">
+                    <button class="btn">Get Started Now</button>
+                    <button class="btn btn--secondary"><i class="btn__icon fab fa-github"></i> Source</button>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <p class="scroll__text">To the moon</p>
+                <!-- start scroll icon animation -->
+                <div class="scroll__middle">
+                    <div class="scroll__mouse"></div>
+                </div>
+                <!-- end scroll icon animation -->
+            </div>
+        </section>
+        <!-- END SECTION HERO -->
+        <!-- START SECTION WALLETS -->
+        <section class="wallets">
+            <div class="wallets__content">
+                <h2 class="wallets__h2">Choose your wallet</h2>
+                <p class="wallets__p">You have to sync with the blockchain to use Dogecoin. MultiDoge is a "light" wallet. It syncs with the blockchain by "skimming" through the blockchain, providing fast sync times. Dogecoin Core, on the other hand, is a "full" wallet. It syncs by downloading it, providing a solid-working Dogecoin wallet.</p>
+                <div class="wallets__options">
+                    <p class="wallets__title-1">Multidoge</p>
+                    <img src="./assets/images/multidoge.png" alt="multidoge wallet logo" class="wallets__img-1">
+                    <div class="wallets__btn">
+                        <button class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows</button>
+                        <div class="btn__hoz">
+                            <button class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux</button>
+                        <button class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-apple"></i> Mac OS</button>
+                        </div>
+                    </div>
+                    <p class="wallets__title-1">Dogecoin Core</p>
+                    <img src="./assets/images/dogecoin-w.png" alt="multidoge wallet logo" class="wallets__img-1">
+                    <div class="wallets__btn">
+                        <button class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows x32</button>
+                        <button class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows x64</button>
+                        <div class="btn__hoz">
+                            <button class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux x32</button>
+                            <button class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux x64</button>
+                        </div>
+                        <button class="btn btn--large-bottom"><i class="btn__icon btn__icon--p-os fab fa-apple"></i> Mac OS</button>
+                    </div>
+                    <p class="wallets__title-1">Android Wallet</p>
+                    <img src="./assets/images/android.png" alt="multidoge wallet logo" class="wallets__img-1">
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION WALLETS -->
+        <!-- START SECTION WHAT IS DOGECOIN? -->
+        <section class="whatis">
+            
+        </section>
+        <!-- END SECTION WHAT IS DOGECOIN? -->
+    </main>
+    <script src="./assets/particles/particles.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

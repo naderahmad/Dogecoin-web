@@ -1,0 +1,12 @@
+// variables
+@use 'components/normalize';
+@use 'variables/colors-theme';
+@use 'variables/typography';
+@use 'variables/layout';
+@use 'variables/paddings';
+// components
+@use 'components/globals';
+@use 'components/navbar';
+@use 'components/hero';
+@use 'components/buttons';
+@use 'components/wallets';

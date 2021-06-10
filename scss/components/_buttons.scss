@@ -1,0 +1,59 @@
+@use '../variables/colors-theme' as v;
+@use '../variables/typography' as  t;
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: t.$font-secondary;
+    font-size: t.$font-size-small;
+    font-weight: 600;
+    background-color: v.$color-secondary;
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    z-index: 2;
+
+    &--secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: v.$color-white;
+        font-weight: 500;
+        border: 1px solid v.$color-secondary;
+        margin: 0;
+    }
+    &--large-top {
+        width: 100%;
+        margin: 0 0 8px 0;
+    }
+    &--large-bottom {
+        width: 100%;
+        margin: 8px 0 0 0;
+    }
+    &--m-left {
+        margin: 0;
+        width: 49%;
+    }
+    &--m-right {
+        margin: 0;
+        width: 49%;
+    }
+    &__icon {
+        color: v.$color-secondary;
+        margin-right: 11px;
+        font-size: 2.4rem;
+    }
+    &__icon--p-os {
+        color: v.$color-black;
+        margin-right: 10px;
+        font-size: 2rem;
+    }
+    &__icon--s-os {
+        color: v.$color-secondary;
+        margin-right: 10px;
+        font-size: 2rem;
+    }
+}
