@@ -1,5 +1,12 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as  t;
+
+@mixin btn-active {
+    background-color: v.$color-primary;
+    color: v.$color-black;
+    font-weight: 700;
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -14,6 +21,10 @@
     border-radius: 5px;
     margin: 15px;
     z-index: 2;
+    
+    &:active {
+        @include btn-active;
+    }
 
     &--secondary {
         display: flex;
