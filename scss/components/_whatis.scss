@@ -1,0 +1,46 @@
+@use '../variables/colors-theme' as v;
+@use '../variables/typography' as t;
+@use '../variables/mixins' as m;
+
+.whatis {
+    &__content {
+        @include m.content;
+        .community {
+            display: flex;
+            flex-direction: column;
+            .left__h2 {
+                @include m.h2;
+            }
+            .left__p {
+                @include m.p;
+                margin-bottom: 30px;
+            }
+            .left__btn {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            &__right {
+                margin-top: 30px
+            }
+            .right__h2 {
+                @include m.h2;
+            }
+            .right__p {
+                @include m.p;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__p {
+        @include m.p;
+    }
+    &__h2 {
+        @include m.h2;
+    }
+    &__video {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 20px;
+    }
+}
