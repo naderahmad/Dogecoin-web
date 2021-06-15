@@ -5,6 +5,7 @@
     &__content {
         padding: 70px 43px;
         height: 300px;
+        
     }   
     &__title {
         text-align: center;
@@ -17,13 +18,6 @@
         color: v.$color-grey;
         margin-bottom: 15px;
         z-index: 2;
-    }
-    &__spark {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 90px;
     }
     &__btn {
         display: flex;

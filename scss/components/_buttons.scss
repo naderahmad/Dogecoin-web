@@ -24,9 +24,6 @@
         @include m.btn-active;
     }
     &--social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background-color: v.$color-black;
         color: v.$color-white;
         margin: 50px 0;
@@ -73,10 +70,16 @@
         margin-right: 10px;
         font-size: 2rem;
     }
+    &__icon--social {
+        color: v.$color-secondary;
+        margin-right: 10px;
+        font-size: 2rem;
+    }
     &__icon--com {
         color: v.$color-black;
         margin-right: 0px;
         font-size: 2rem;
+        padding: 10px;
     }
     &--howto {
         margin: 15px auto;

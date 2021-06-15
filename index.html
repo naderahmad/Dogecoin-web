@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <button onclick="topFunction()" id="toTop"><i class="fas fa-arrow-up"></i></button>
     <header class="header">
         <div class="header__logo">
             <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
@@ -35,11 +36,11 @@
                 <h1 class="hero__title"><span class="hero__span">1 Dogecoin =</span> 1 Dogecoin</h1>
                 <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
                 <!-- start background circle blur -->
-                <img src="./assets/images/spark.png" alt="" class="hero__spark">
+                <div class="radialFx"></div>
                 <!-- end background circle blur -->
                 <div class="hero__btn">
                     <a href="#start" class="btn">Get Started Now</a>
-                    <a href="https://github.com/dogecoin/dogecoin" target="_blank" class="btn btn--secondary"><i class="btn__icon fab fa-github"></i> Source</a>
+                    <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--secondary"><i class="btn__icon fab fa-github"></i> Source</a>
                 </div>
             </div>
             <div class="hero__scroll">
@@ -61,10 +62,10 @@
                     <p class="wallets__title-1">Multidoge</p>
                     <img src="./assets/images/multidoge.png" alt="multidoge wallet logo" class="wallets__img-1">
                     <div class="wallets__btn">
-                        <a href="https://multidoge.org/?dl=win" target="_blank" class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows</a>
+                        <a href="https://multidoge.org/?dl=win" target="_blank" rel="noopener" class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows</a>
                         <div class="btn__hoz">
-                            <a href="https://multidoge.org/?dl=lin" target="_blank" class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux</a>
-                            <a href="https://multidoge.org/?dl=osx" target="_blank" class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-apple"></i> Mac OS</a>
+                            <a href="https://multidoge.org/?dl=lin" target="_blank" rel="noopener" class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux</a>
+                            <a href="https://multidoge.org/?dl=osx" target="_blank" rel="noopener" class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-apple"></i> Mac OS</a>
                         </div>
                     </div>
                     <p class="wallets__title-1">Dogecoin Core</p>
@@ -81,7 +82,7 @@
                         <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-osx.dmg" class="btn btn--large-bottom"><i class="btn__icon btn__icon--p-os fab fa-apple"></i> Mac OS</a>
                     </div>
                     <p class="wallets__title-1">Android Wallet</p>
-                    <a href="https://play.google.com/store/apps/details?id=de.langerhans.wallet&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1">
+                    <a href="https://play.google.com/store/apps/details?id=de.langerhans.wallet&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1" target="_blank" rel="noopener">
                         <img src="./assets/images/android.png" alt="multidoge wallet logo" class="wallets__img-1">
                     </a>
                 </div>
@@ -93,23 +94,25 @@
             <div class="whatis__content">
                 <h2 class="whatis__h2">What is Dogecoin?</h2>
                 <p class="whatis__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
-                <iframe class="whatis__video" src="https://www.youtube-nocookie.com/embed/_KVZmS_UO5I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="whatis__video" width="420" height="315"
+                    src="https://www.youtube-nocookie.com/embed/_KVZmS_UO5I" title="What is Dogecoin?" allowfullscreen frameborder="0">
+                </iframe>
                 <div class="community">
                     <div class="community__left">
                         <h3 class="left__h2">The fun and friendly Internet currency</h3>
                         <p class="left__p">Dogecoin sets itself apart from other digital currencies with an amazing, vibrant community made up of friendly folks just like you.</p>
                         <div class="left__btn">
-                            <button class="btn btn--m-left"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Reddit Community</button>
-                            <button class="btn btn--m-right">Discord Community<i class="btn__icon btn__icon--com fab fa-discord"></i></button>
+                            <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn btn--m-left"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Reddit Community</a>
+                            <a href="https://discord.gg/dogecoin" target="_blank" rel="noopener" class="btn btn--m-right">Discord Community<i class="btn__icon btn__icon--com fab fa-discord"></i></a>
                         </div>
-                        <button class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-reddit"></i>Dogeducation Reddit Community</button>
+                        <a href="https://www.reddit.com/r/dogeducation/" target="_blank" rel="noopener" class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-reddit"></i>Dogeducation Reddit Community</a>
                     </div>
                     <div class="community__right">
                         <h3 class="right__h2">What's with Dogecoin and the dog?</h3>
                         <p class="right__p">"Doge" is our fun, friendly mascot! The Shiba Inu is a Japanese breed of dog that was popularized as an online meme and represents Dogecoin.</p>
                         <div class="right__btn">
-                            <button class="btn btn--large-top">Learn more about Doge</button>
-                            <button class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-wikipedia-w"></i>Shiba Inu</button>
+                            <a href="https://knowyourmeme.com/memes/doge" target="_blank" rel="noopener" class="btn btn--large-top">Learn more about Doge</a>
+                            <a href="https://en.wikipedia.org/wiki/Shiba_Inu" target="_blank" rel="noopener" class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-wikipedia-w"></i>Shiba Inu</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +124,7 @@
             <div class="howto__content">
                 <h2 class="howto__h2">How to get started with Dogecoin</h2>
                 <div class="howto__img">
-                    <img src="./assets/images/mobilewallet.png" alt="mobile wallet screenshot">
+                    <img class="mobile-img" src="./assets/images/mobilewallet.png" alt="mobile wallet screenshot">
                 </div>
                 <div class="accordion">
                     <div>
@@ -150,9 +153,9 @@
                         <p class="accordion__p">
                           There are numerous amounts of ways to get Dogecoin. You can buy them, trade for them, get tipped, "mine" them, and more. They are surprisingly endless!
                   
-                          You can get tipped Dogecoin by participating in <a href="https://www.reddit.com/r/dogecoin" target="_blank" class="btn btn--howto">Our community</a> If that's not your style, another way to have your first Dogecoin is to participate at Dogecoin Folding@Home.
+                          You can get tipped Dogecoin by participating in <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn btn--howto">Our community</a> If that's not your style, another way to have your first Dogecoin is to participate at Dogecoin Folding@Home.
                   
-                          <a href="https://www.dogecoinfah.com/" target="_blank" class="btn btn--howto">Folding@Home (FaH)</a> is a distributed computing project. You can join team dogefolders, bring in your computing power, help to find cures for diseases and receive some Doges for your efforts.
+                          <a href="https://www.dogecoinfah.com/" target="_blank" rel="noopener" class="btn btn--howto">Folding@Home (FaH)</a> is a distributed computing project. You can join team dogefolders, bring in your computing power, help to find cures for diseases and receive some Doges for your efforts.
                         </p>
                       </div>
                     </div>
@@ -163,14 +166,16 @@
         <!-- START SECTION GET WALLET-->
         <section class="get-wallet" id="social">
             <div class="get-wallet__content">
-                <button class="btn btn--social">Get Wallet</button>
                 <div class="social">
-                    <i class="social__icon fab fa-facebook-square"></i>
-                    <i class="social__icon fab fa-twitter-square"></i>
-                    <i class="social__icon fab fa-reddit-square"></i>
-                    <i class="social__icon fab fa-discord"></i>
+                    <a href="https://www.facebook.com/OfficialDogecoin/" aria-label="Facebook" target="_blank" rel="noopener"><i class="social__icon fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/dogecoin" aria-label="Twitter" target="_blank" rel="noopener"><i class="social__icon fab fa-twitter-square"></i></a>
+                    <a href="https://www.reddit.com/r/dogecoin" aria-label="Reddit" target="_blank" rel="noopener"><i class="social__icon fab fa-reddit-square"></i></a>
+                    <a href="https://discord.com/invite/dogecoin" aria-label="Discord" target="_blank" rel="noopener"><i class="social__icon fab fa-discord"></i></a>
                 </div>
-                <button class="btn btn--social btn__dropdown">Language <i class="btn__icon--social fas fa-sort-down"></i></button>
+                <div class="social__btn">
+                    <a href="#wallets" class="btn btn--social">Get Wallet</a>
+                    <a href="#wallets" class="btn btn--social"><i class="btn__icon--social fas fa-globe-americas"></i>Language</a>
+                </div>
             </div>
         </section>
         <!-- END SECTION GET WALLET -->
@@ -179,7 +184,7 @@
             <div class="footer__content">
                 <p class="footer__p">
                     Copyright © The Ðogecoin Project 2021
-                    Created by <a href="#">Jackson Palmer</a> & <a href="#">Shibetoshi Nakamoto</a>. Website Design by <a href="#"> /u/edswf1</a>. Logo by <a href="#">Christine Ricks</a>.
+                    Created by <a href="https://ummjackson.com/" target="_blank" rel="noopener">Jackson Palmer</a> & <a href="https://twitter.com/BillyM2k" target="_blank" rel="noopener">Shibetoshi Nakamoto</a>. Website Design by <a href="https://github.com/naderahmad/Dogecoin-web" target="_blank" rel="noopener"> NaderAhmad</a>. Logo by <a href="#">Christine Ricks</a>.
                 </p>
             </div>
         </footer>
