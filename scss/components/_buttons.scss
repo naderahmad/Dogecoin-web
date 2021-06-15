@@ -10,10 +10,11 @@
     font-size: t.$font-size-xsmall;
     font-weight: 600;
     background-color: v.$color-secondary;
+    color: v.$color-black;
     width: 160px;
     height: 40px;
     border: none;
-    padding: 10px;
+    text-decoration: none;
     border-radius: 5px;
     outline: none;
     margin: 15px;
@@ -22,7 +23,14 @@
     &:active {
         @include m.btn-active;
     }
-
+    &--social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: v.$color-black;
+        color: v.$color-white;
+        margin: 50px 0;
+    }
     &--secondary {
         display: flex;
         align-items: center;
@@ -69,5 +77,8 @@
         color: v.$color-black;
         margin-right: 0px;
         font-size: 2rem;
+    }
+    &--howto {
+        margin: 15px auto;
     }
 }

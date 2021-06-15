@@ -1,4 +1,7 @@
 @use '../variables/colors-theme' as v;
+html {
+    scroll-behavior: smooth;
+}
 body {
     box-sizing: border-box;
     padding: 0;

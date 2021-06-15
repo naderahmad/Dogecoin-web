@@ -1,0 +1,19 @@
+@use '../variables/colors-theme' as v;
+@use '../variables/typography' as t;
+@use '../variables/mixins' as m;
+
+.footer {
+    background-color: v.$color-black;
+    &__content {
+        @include m.content;
+        padding: 20px;
+    }
+    &__p {
+        color: v.$color-white;
+        font-size: t.$font-size-small;
+        text-align: center;
+        a {
+            color: v.$color-secondary;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use '../variables/colors-theme' as v;
+@use '../variables/typography' as t;
+@use '../variables/mixins' as m;
+
+
+.get-wallet {
+    background-color: v.$color-secondary;
+    padding-top: 0;
+    padding-bottom: 0;
+    &__content {
+        @include m.content;
+        padding: 0;
+    }
+}
+.social__icon {
+    color: v.$color-black;
+    margin-right: 20px;
+    font-size: t.$font-size-ml;
+
+}

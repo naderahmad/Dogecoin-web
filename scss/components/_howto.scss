@@ -1,0 +1,73 @@
+@use '../variables/colors-theme' as v;
+@use '../variables/typography' as t;
+@use '../variables/mixins' as m;
+
+.howto {
+    @include m.content;
+    &__h2 {
+        @include m.h2;
+    }
+    .howto__img {
+        width: 100%;
+    }
+    img {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+    .accordion {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: t.$font-secondary;
+        background: #262525;
+
+        &__label,
+        &__content {
+            padding: 20px 20px;
+        }
+        &__label {
+            display: block;
+            color: v.$color-secondary;
+            font-size: t.$font-size-xmedium;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.1s;
+            border-bottom: 1px solid v.$color-black;
+        }
+        &__label:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        &__label::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            width: 12px;
+            height: 6px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+            background-size: contain;
+            transition: transform 0.4s;
+        }
+        &__content {
+            background: #ffffff;
+            display: none;
+        }
+        .accordion__p {
+            text-align: center;
+            font-size: t.$font-size-small;
+            line-height: 1.6;
+        }
+        &__input {
+            display: none;
+        }
+        .accordion__input:checked ~ .accordion__content {
+            display: block;
+        }
+        .accordion__input:checked ~ .accordion__label::after {
+            transform: translateY(-50%) rotate(0.5turn);
+        }
+    }    
+}

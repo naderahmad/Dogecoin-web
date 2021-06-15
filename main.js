@@ -1,3 +1,4 @@
+// Navbar button burger
 const menuBtn = document.querySelector('.navbar__btn');
 let menuOpen = false;
 
@@ -10,5 +11,5 @@ menuBtn.addEventListener('click', () => {
         menuOpen = false;
     }
 });
-
+// Particles
 particlesJS.load('particles-js', 'particles.json');
