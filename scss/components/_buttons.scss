@@ -41,18 +41,24 @@
     }
     &--large-top {
         width: 100%;
-        margin: 0 0 8px 0;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 8px;
     }
     &--large-bottom {
         width: 100%;
-        margin: 0 0 10px 0;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        max-width: 300px;
     }
     &--m-left {
         margin: 0 0 10px 0;
+        padding: 0 15px;
         width: 48%;
     }
     &--m-right {
         margin: 0 0 10px 0;
+        padding: 0 15px;
         width: 48%;
     }
     &__icon {
@@ -77,9 +83,7 @@
     }
     &__icon--com {
         color: v.$color-black;
-        margin-right: 0px;
         font-size: 2rem;
-        padding: 10px;
     }
     &--howto {
         margin: 15px auto;

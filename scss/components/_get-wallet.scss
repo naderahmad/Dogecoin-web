@@ -2,7 +2,6 @@
 @use '../variables/typography' as t;
 @use '../variables/mixins' as m;
 
-
 .get-wallet {
     background-color: v.$color-secondary;
     padding-top: 0;
@@ -28,6 +27,8 @@
 }
 .social__btn {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    padding: 0 30px;
+    width: 90%;
+    justify-content: center;
+    gap: 10px;
 }

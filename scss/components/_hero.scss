@@ -9,6 +9,8 @@
     }   
     &__title {
         text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
         margin-bottom: 30px;
         z-index: 2;
     }
@@ -18,6 +20,9 @@
         color: v.$color-grey;
         margin-bottom: 15px;
         z-index: 2;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
     &__btn {
         display: flex;
