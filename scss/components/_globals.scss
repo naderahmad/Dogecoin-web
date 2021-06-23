@@ -1,4 +1,5 @@
 @use '../variables/colors-theme' as v;
+@use '../variables/layout' as b;
 html {
     scroll-behavior: smooth;
 }
@@ -6,10 +7,11 @@ body {
     box-sizing: border-box;
     padding: 0;
     background-color: v.$color-black;
+    overflow-x: hidden;
 }
 #particles-js {
     position: absolute;
-    width: 100vw;
+    width: calc(100vw - 20px);
     height: 100vh;
     z-index: -1;
 }
@@ -41,4 +43,41 @@ body {
     position: absolute;
     left: 0%;
     top: 380px;
+}
+.radialFx-2 {
+    position: absolute;
+    background: rgba($color: #CFB66C, $alpha: 0.3);
+    filter: blur(130px);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    top: 700px;
+}
+.radialFx-3 {
+    display: none;
+    @include b.breakpoint(large) {
+        display: block;
+        position: absolute;
+        background: rgba($color: #CFB66C, $alpha: 0.8);
+        filter: blur(100px);
+        width: 200px;
+        height: 200px;
+        z-index: -1;
+        position: absolute;
+        left: 95%;
+        top: 250px;
+    }   
+}
+.radialFx-4 {
+    position: absolute;
+    background: rgba($color: #CFB66C, $alpha: 0.8);
+    filter: blur(100px);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+    left: 21%;
+    top: 350px;
 }

@@ -10,7 +10,7 @@ $font-size-xmedium: 1.6rem;
 $font-size-medium: 1.8rem;
 $font-size-large: 2.0rem;
 $font-size-ml: 3.6rem;
-$font-size-extra-large: 6.8rem;
+$font-size-extra-large: 6.7rem;
 
 html {
     font-size: 62.5%;
@@ -31,7 +31,7 @@ h1 {
     line-height: auto;
 }
 h2 {
-    color: v.$color-white;
+    color: v.$color-black;
     font-family: $font-primary;
     font-size: $font-size-ml;
     font-weight: 700;

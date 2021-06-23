@@ -1,4 +1,4 @@
-@use '../variables/colors-theme' as v;
+@use '../variables/colors-theme' as c;
 @use '../variables/typography' as t;
  
 @mixin content {
@@ -9,13 +9,18 @@
 }
 // Buttons
 @mixin btn-active {
-    background-color: v.$color-primary;
-    color: v.$color-black;
+    background-color: c.$color-primary;
+    color: c.$color-black;
     font-weight: 700;
+}
+@mixin btn-hover {
+    background-color: c.$color-secondary;
+    color: c.$color-black;
+    transition: all .1s ease;
 }
 // Text
 @mixin p {
-    color: v.$color-white;
+    color: c.$color-white;
     font-size: t.$font-size-small;
     text-align: center;
     line-height: 1.7;

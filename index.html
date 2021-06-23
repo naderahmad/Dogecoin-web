@@ -12,19 +12,27 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <button onclick="topFunction()" id="toTop"><i class="fas fa-arrow-up"></i></button>
-    <header  class="header">
-        <nav id="navbar"  class="header__navbar">
-            <div class="header__logo">
-                <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
-                <p class="logo__text">Dogecoin</p>
-            </div>
-            <!-- start menu burger button -->
-            <div class="navbar__btn">
-                <div class="navbar__burger"></div>
-            </div>
-            <!-- end menu burger button -->
+    <!-- start Button to Top -->
+    <button onclick="scrollFunction()" id="toTop"><i class="fas fa-arrow-up"></i></button>
+    <!-- end Button to top -->
+    <header class="header">
+        <div class="navbar__logo">
+            <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
+            <p class="logo__text">Dogecoin</p>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="#" class="navbar__link">Wallets</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">What is Dogecoin?</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Get Started Now</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Guide</a></li>
+            </ul>
         </nav>
+        <!-- start menu burger button -->
+        <div class="navbar__btn">
+            <div class="btn__burger"></div>
+        </div>
+        <!-- end menu burger button -->
     </header>
     <!-- start particles background -->
     <div id="particles-js"></div>
@@ -33,58 +41,72 @@
         <!-- START SECTION HERO -->
         <section class="hero" id="hero">
             <div class="hero__content">
-                <h1 class="hero__title"><span class="hero__span">1 Dogecoin =</span> 1 Dogecoin</h1>
+                <h1 class="hero__title">Dogecoin<br><span>to the moon</span></h1>
                 <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
                 <!-- start background circle blur -->
-                <div class="radialFx"></div>
+                <div class="radialFx-1"></div>
+
+                <div class="radialFx-2"></div>
+                <div class="radialFx-3"></div>
+                <div class="radialFx-4"></div>
                 <!-- end background circle blur -->
                 <div class="hero__btn">
-                    <a href="#start" class="btn">Get Started Now</a>
-                    <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--secondary"><i class="btn__icon fab fa-github"></i> Source</a>
+                    <a href="#start" class="btn">Get Started</a>
+                    <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--outline"><i class="btn__icon fab fa-github"></i> Source</a>
                 </div>
             </div>
             <div class="hero__scroll">
-                <p class="scroll__text">To the moon</p>
                 <!-- start scroll icon animation -->
                 <div class="scroll__middle">
                     <div class="scroll__mouse"></div>
                 </div>
                 <!-- end scroll icon animation -->
             </div>
+            <div class="hero__img-container">
+                <img class="hero__img" src="./assets/images/logo.png" alt="logo dogecoin">
+            </div>
         </section>
         <!-- END SECTION HERO -->
         <!-- START SECTION WALLETS -->
         <section class="wallets" id="wallets">
             <div class="wallets__content">
-                <h2 class="wallets__h2">Choose your wallet</h2>
-                <p class="wallets__p">You have to sync with the blockchain to use Dogecoin. MultiDoge is a "light" wallet. It syncs with the blockchain by "skimming" through the blockchain, providing fast sync times. Dogecoin Core, on the other hand, is a "full" wallet. It syncs by downloading it, providing a solid-working Dogecoin wallet.</p>
+                <div class="wallets__text">
+                    <h2 class="wallets__h2">Choose your wallet</h2>
+                    <p class="wallets__p">You have to sync with the blockchain to use Dogecoin. MultiDoge is a "light" wallet. It syncs with the blockchain by "skimming" through the blockchain, providing fast sync times. Dogecoin Core, on the other hand, is a "full" wallet. It syncs by downloading it, providing a solid-working Dogecoin wallet.</p>
+                </div>
                 <div class="wallets__options">
-                    <p class="wallets__title-1">Multidoge</p>
-                    <img src="./assets/images/multidoge.png" alt="multidoge wallet logo" class="wallets__img-1">
-                    <div class="wallets__btn">
-                        <a href="https://multidoge.org/?dl=win" target="_blank" rel="noopener" class="btn btn--large-top"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows</a>
-                        <div class="btn__hoz">
-                            <a href="https://multidoge.org/?dl=lin" target="_blank" rel="noopener" class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux</a>
-                            <a href="https://multidoge.org/?dl=osx" target="_blank" rel="noopener" class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-apple"></i> Mac OS</a>
+                    <div class="wallets__op1">
+                        <h3 class="wallets__title-1">Multidoge</h3>
+                        <img src="./assets/images/multidoge.png" alt="multidoge wallet logo" class="wallets__img-1">
+                        <div class="wallets__btn">
+                            <div class="wallets__dropdown">
+                                <button class="btn btn--os">Select OS <i class="btn__icon--p-os fas fa-chevron-down"></i></button>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item dropdown__link--disabled">Cerrar</li>
+                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-windows"></i> Windows</a></li>
+                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-linux"></i> Linux</a></li>
+                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-apple"></i> Mac OS</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <p class="wallets__title-1">Dogecoin Core</p>
-                    <img src="./assets/images/dogecoin-w.png" alt="multidoge wallet logo" class="wallets__img-1">
-                    <div class="wallets__btn">
-                        <div class="btn__hoz">
-                            <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win32-setup-unsigned.exe" class="btn btn--m-left"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows x32</a>
-                            <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win64-setup-unsigned.exe" class="btn btn--m-right"><i class="btn__icon btn__icon--p-os fab fa-windows"></i> Windows x64</a>
+                    <div class="wallets__op2">
+                        <h3 class="wallets__title-1">Dogecoin Core</h3>
+                        <img src="./assets/images/dogecoin-w.png" alt="multidoge wallet logo" class="wallets__img-1">
+                        <div class="wallets__btn">
+                            <div class="wallets__dropdown">
+                                <button class="btn btn--os">Select OS <i class="btn__icon--p-os fas fa-chevron-down"></i></button>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item dropdown__link--disabled">Cerrar</li>
+                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win32-setup-unsigned.exe" class="dropdown__link"><i class="fab fa-windows"></i> Windows x32</a></li>
+                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win64-setup-unsigned.exe" class="dropdown__link"><i class="fab fa-windows"></i> Windows x64</a></li>
+                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-i686-pc-linux-gnu.tar.gz" class="dropdown__link"><i class="fab fa-linux"></i> Linux x32</a></li>
+                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-x86_64-linux-gnu.tar.gz" class="dropdown__link"><i class="fab fa-linux"></i> Linux x64</a></li>
+                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-osx.dmg" class="dropdown__link"><i class="fab fa-apple"></i> Mac OS</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="btn__hoz">
-                            <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-i686-pc-linux-gnu.tar.gz" class="btn btn--m-left btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux x32</a>
-                            <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-x86_64-linux-gnu.tar.gz" class="btn btn--m-right btn--secondary"><i class="btn__icon btn__icon--s-os fab fa-linux"></i> Linux x64</a>
-                        </div>
-                        <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-osx.dmg" class="btn btn--large-bottom"><i class="btn__icon btn__icon--p-os fab fa-apple"></i> Mac OS</a>
                     </div>
-                    <p class="wallets__title-1">Android Wallet</p>
-                    <a href="https://play.google.com/store/apps/details?id=de.langerhans.wallet&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1" target="_blank" rel="noopener">
-                        <img src="./assets/images/android.png" alt="multidoge wallet logo" class="wallets__img-1">
-                    </a>
                 </div>
             </div>
         </section>
@@ -94,25 +116,23 @@
             <div class="whatis__content">
                 <h2 class="whatis__h2">What is Dogecoin?</h2>
                 <p class="whatis__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
-                <iframe class="whatis__video"
-                    src="https://www.youtube-nocookie.com/embed/_KVZmS_UO5I" title="What is Dogecoin?" allowfullscreen frameborder="0">
-                </iframe>
+                <video class="whatis__video" src="./assets/video/dogecoin.mp4" controls></video>
                 <div class="community">
                     <div class="community__left">
                         <h3 class="left__h2">The fun and friendly Internet currency</h3>
                         <p class="left__p">Dogecoin sets itself apart from other digital currencies with an amazing, vibrant community made up of friendly folks just like you.</p>
                         <div class="left__btn">
-                            <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn btn--m-left"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Reddit Community</a>
-                            <a href="https://discord.gg/dogecoin" target="_blank" rel="noopener" class="btn btn--m-right"><i class="btn__icon btn__icon--com fab fa-discord"></i>Discord Community</a>
+                            <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Reddit Community</a>
+                            <a href="https://discord.gg/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-discord"></i>Discord Community</a>
+                            <a href="https://www.reddit.com/r/dogeducation/" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Dogeducation Reddit</a>
                         </div>
-                        <a href="https://www.reddit.com/r/dogeducation/" target="_blank" rel="noopener" class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-reddit"></i>Dogeducation Reddit Community</a>
                     </div>
                     <div class="community__right">
                         <h3 class="right__h2">What's with Dogecoin and the dog?</h3>
                         <p class="right__p">"Doge" is our fun, friendly mascot! The Shiba Inu is a Japanese breed of dog that was popularized as an online meme and represents Dogecoin.</p>
                         <div class="right__btn">
-                            <a href="https://knowyourmeme.com/memes/doge" target="_blank" rel="noopener" class="btn btn--large-top">Learn more about Doge</a>
-                            <a href="https://en.wikipedia.org/wiki/Shiba_Inu" target="_blank" rel="noopener" class="btn btn--large-bottom btn--secondary"><i class="btn__icon fab fa-wikipedia-w"></i>Shiba Inu</a>
+                            <a href="https://knowyourmeme.com/memes/doge" target="_blank" rel="noopener" class="btn">Learn more about Doge</a>
+                            <a href="https://en.wikipedia.org/wiki/Shiba_Inu" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-wikipedia-w"></i>Shiba Inu</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +149,7 @@
                 <div class="accordion">
                     <div class="accordion__item-1">
                         <input type="checkbox" name="example_accordion" id="section1" class="accordion__input">
-                        <label for="section1" class="accordion__label">Choose your Wallet</label>
+                        <label for="section1" class="accordion__label">1 ) Choose your Wallet</label>
                         <div class="accordion__content">
                             <p class="accordion__p"> 
                             Pick a Wallet from our <a href="#wallets" class="btn btn--howto">Wallet Section</a>
@@ -139,7 +159,7 @@
                     </div>
                     <div class="accordion__item-2">
                         <input type="checkbox" name="example_accordion" id="section2" class="accordion__input">
-                        <label for="section2" class="accordion__label">Configure your Wallet</label>
+                        <label for="section2" class="accordion__label">2 ) Configure your Wallet</label>
                         <div class="accordion__content">
                             <p class="accordion__p"> 
                                 After downloading, you can configure your Wallet according to our <a href="#" class="btn btn--howto">Guide</a>
@@ -148,7 +168,7 @@
                     </div>
                     <div class="accordion__item-3">
                         <input type="checkbox" name="example_accordion" id="section3" class="accordion__input">
-                        <label for="section3" class="accordion__label">Get Some Dogecoin</label>
+                        <label for="section3" class="accordion__label">3 ) Get Some Dogecoin</label>
                         <div class="accordion__content">
                             <p class="accordion__p"> 
                                 There are numerous amounts of ways to get Dogecoin. You can buy them, trade for them, get tipped, "mine" them, and more. They are surprisingly endless!

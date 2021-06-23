@@ -1,38 +1,90 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as t;
+@use '../variables/layout' as b;
 .hero {
-    min-height: 100vh;
+    padding-top: 200px;
+    min-height: calc(100vh - 200px);
+    background-color: rgba($color: #000, $alpha: 0.2);
+    backdrop-filter: blur(3px);
+    @include b.breakpoint(large) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        padding: 0 200px;
+    }
+
     &__content {
         padding: 70px 43px;
         height: 300px;
-        
-    }   
+        @include b.breakpoint(large) {
+            padding: 70px 0;   
+        }
+    }
     &__title {
         text-align: center;
         max-width: 400px;
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         z-index: 2;
+        @include b.breakpoint(large) {
+            font-size: t.$font-size-extra-large;
+            font-family: t.$font-secondary;
+            text-transform: uppercase;
+            text-align: left;
+            max-width: 550px;
+        }
     }
     &__p {
         font-size: t.$font-size-small;
         text-align: center;
-        color: v.$color-grey;
-        margin-bottom: 15px;
-        z-index: 2;
-        max-width: 400px;
         margin: 0 auto;
-        margin-bottom: 10px;
+        color: v.$color-grey;
+        margin-bottom: 30px;
+        z-index: 2;
+        max-width: 400px;;
+        @include b.breakpoint(large) {
+            font-size: t.$font-size-medium;
+            text-align: left;
+            max-width: 550px;
+        }
     }
     &__btn {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
+        .btn {
+            width: 170px;
+            @include b.breakpoint(large) {
+                width: 140px;
+            }
+        }
+        .btn:first-child {
+            margin-bottom: 15px;
+            @include b.breakpoint(large) {
+                margin-bottom: 0;
+            }
+        }
+        @include b.breakpoint(large) {
+            display: grid;
+            grid-template-columns: 200px 200px;
+            gap: 20px;
+        }
+    }
+    &__img {
+        display: none;
+        width: 400px;
+        height: 400px;
+        @include b.breakpoint(large) {
+            display: flex;
+        }
     }
     &__scroll {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-end;
         z-index: 2;
         .scroll__text {
             font-size: t.$font-size-xsmall;
@@ -40,7 +92,7 @@
         }
         .scroll__middle {
             position: absolute;
-            top: 570px;
+            top: 880px;
             left: 50%;
             transform: translate(-50%,-50%);
         }

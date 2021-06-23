@@ -4,6 +4,9 @@
 
 .howto {
     @include m.content;
+    background-color: v.$color-white;
+    padding-top: 50px;
+    padding-bottom: 50px;
     &__h2 {
         @include m.h2;
         max-width: 400px;
@@ -19,13 +22,12 @@
         margin: 0 auto;
     }
     .accordion {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        max-width: 70%;
+        box-shadow: 3px 3px 0px 0px rgba($color: #000, $alpha: 0.3);
+        max-width: 100%;
         margin: 0 auto;
         overflow: hidden;
         font-family: t.$font-secondary;
-        background: #262525;
+        background: v.$color-black;
 
         &__label,
         &__content {
@@ -33,16 +35,16 @@
         }
         &__label {
             display: block;
-            color: v.$color-secondary;
+            color: v.$color-white;
             font-size: t.$font-size-xmedium;
             font-weight: 500;
             cursor: pointer;
             position: relative;
             transition: background 0.1s;
-            border-bottom: 1px solid v.$color-black;
+            border-bottom: 1px solid v.$color-grey;
         }
         &__label:hover {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba($color: v.$color-secondary, $alpha: 0.7);
         }
         &__label::after {
             content: "";
@@ -66,7 +68,7 @@
         }
         .accordion__p {
             text-align: center;
-            font-size: t.$font-size-small;
+            font-size: t.$font-size-xmedium;
             line-height: 1.6;
         }
         &__input {
