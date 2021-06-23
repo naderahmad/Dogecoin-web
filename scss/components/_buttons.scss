@@ -33,7 +33,10 @@
     &--social {
         background-color: c.$color-black;
         color: c.$color-white;
-        margin: 50px 0;
+        font-weight: 500;
+        font-size: t.$font-size-small;
+        border: none;
+        margin: 30px 0 40px 0;
     }
     &--outline {
         background-color: transparent;

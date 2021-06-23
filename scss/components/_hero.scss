@@ -2,8 +2,8 @@
 @use '../variables/typography' as t;
 @use '../variables/layout' as b;
 .hero {
-    padding-top: 200px;
-    min-height: calc(100vh - 200px);
+    position: relative;
+    min-height: calc(100vh + 30px);
     background-color: rgba($color: #000, $alpha: 0.2);
     backdrop-filter: blur(3px);
     @include b.breakpoint(large) {
@@ -14,10 +14,11 @@
         align-content: center;
         padding: 0 200px;
     }
-
     &__content {
-        padding: 70px 43px;
-        height: 300px;
+        position: absolute;
+        top: 15%;
+        padding: 70px 40px;
+        height: auto;
         @include b.breakpoint(large) {
             padding: 70px 0;   
         }
@@ -86,13 +87,9 @@
         flex-direction: column;
         justify-content: flex-end;
         z-index: 2;
-        .scroll__text {
-            font-size: t.$font-size-xsmall;
-            color: v.$color-white;
-        }
         .scroll__middle {
             position: absolute;
-            top: 880px;
+            top: 90%;
             left: 50%;
             transform: translate(-50%,-50%);
         }
