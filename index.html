@@ -18,13 +18,13 @@
     <header class="header">
         <div class="navbar__logo">
             <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
-            <p class="logo__text">Dogecoin</p>
+            <a href="#" class="logo__text">Dogecoin</a>
         </div>
         <nav class="navbar">
             <ul class="navbar__list">
-                <li class="navbar__item"><a href="#" class="navbar__link">Wallets</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">What is Dogecoin?</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Get Started Now</a></li>
+                <li class="navbar__item"><a href="#wallets" class="navbar__link">Wallets</a></li>
+                <li class="navbar__item"><a href="#about" class="navbar__link">What is Dogecoin?</a></li>
+                <li class="navbar__item"><a href="#start" class="navbar__link">Get Started Now</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">Guide</a></li>
             </ul>
         </nav>
@@ -40,30 +40,31 @@
     <main class="main">
         <!-- START SECTION HERO -->
         <section class="hero" id="hero">
-            <div class="hero__content">
-                <h1 class="hero__title">Dogecoin<br><span>to the moon</span></h1>
-                <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
-                <!-- start background circle blur -->
-                <div class="radialFx-1"></div>
-
-                <div class="radialFx-2"></div>
-                <div class="radialFx-3"></div>
-                <div class="radialFx-4"></div>
-                <!-- end background circle blur -->
-                <div class="hero__btn">
-                    <a href="#start" class="btn">Get Started</a>
-                    <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--outline"><i class="btn__icon fab fa-github"></i> Source</a>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Dogecoin<br><span>to the moon</span></h1>
+                    <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
+                    <div class="hero__btn">
+                        <a href="#start" class="btn">Get Started</a>
+                        <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--outline"><i class="btn__icon fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+                <div class="hero__img-container">
+                    <img class="hero__img" src="./assets/images/logo.png" alt="logo dogecoin">
                 </div>
             </div>
+            <!-- start background circle blur -->
+            <div class="radialFx-1"></div>
+            <div class="radialFx-2"></div>
+            <div class="radialFx-3"></div>
+            <div class="radialFx-4"></div>
+            <!-- end background circle blur -->
             <div class="hero__scroll">
                 <!-- start scroll icon animation -->
                 <div class="scroll__middle">
                     <div class="scroll__mouse"></div>
                 </div>
                 <!-- end scroll icon animation -->
-            </div>
-            <div class="hero__img-container">
-                <img class="hero__img" src="./assets/images/logo.png" alt="logo dogecoin">
             </div>
         </section>
         <!-- END SECTION HERO -->
@@ -112,7 +113,7 @@
         </section>
         <!-- END SECTION WALLETS -->
         <!-- START SECTION WHAT IS DOGECOIN? -->
-        <section class="whatis" id="whatis">
+        <section class="whatis" id="about">
             <div class="whatis__content">
                 <h2 class="whatis__h2">What is Dogecoin?</h2>
                 <p class="whatis__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>

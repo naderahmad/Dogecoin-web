@@ -5,7 +5,7 @@
 .howto {
     @include m.content;
     background-color: v.$color-white;
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 50px;
     &__h2 {
         @include m.h2;
