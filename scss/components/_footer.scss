@@ -1,6 +1,7 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as t;
 @use '../variables/mixins' as m;
+@use '../variables/layout' as b;
 
 .footer {
     background-color: v.$color-black;
@@ -16,6 +17,9 @@
         text-align: center;
         a {
             color: v.$color-secondary;
+        }
+        @include b.breakpoint(large) {
+            font-size: t.$font-size-small;
         }
     }
 }

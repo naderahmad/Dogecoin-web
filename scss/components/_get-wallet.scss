@@ -12,23 +12,10 @@
     }
 }
 .social {
-    padding-top: 50px;
-}
-.social__title {
-    font-weight: 600;
-    font-size: t.$font-size-xmedium;
-    text-align: center;
+    padding: 30px;
 }
 .social__icon {
     color: v.$color-black;
     margin-right: 20px;
-    margin-top: 10px;
     font-size: t.$font-size-ml;
-}
-.social__btn {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }

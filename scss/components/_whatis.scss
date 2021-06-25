@@ -1,6 +1,7 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as t;
 @use '../variables/mixins' as m;
+@use '../variables/layout' as b;
 
 .whatis {
     &__content {
@@ -11,8 +12,17 @@
         .community {
             display: flex;
             flex-direction: column;
+            @include b.breakpoint(large) {
+                flex-direction: row;
+                justify-content: center;
+            }
             &__left {
                 margin: 0 auto;
+                @include b.breakpoint(large) {
+                    padding: 0 20px;
+                    margin: 0;
+                    width: 40%
+                }
             }
             .left__h2 {
                 @include m.h2;
@@ -21,6 +31,10 @@
                 margin: 0 auto;
                 margin-bottom: 30px;
                 font-size: t.$font-size-large;
+                @include b.breakpoint(large) {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid v.$color-primary;
+                }
             }
             .left__p {
                 @include m.p;
@@ -36,22 +50,41 @@
                 max-width: 300px;
                 justify-content: space-between;
                 gap: 10px;
+                @include b.breakpoint(large) {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    max-width: 500px;
+                    justify-content: center;
+                    align-items: center;
+                    .btn:not(:last-child) {
+                        width: 120px
+                    }
+                }
             }
             &__right {
-                margin-top: 30px
+                margin-top: 30px;
+                @include b.breakpoint(large) {
+                    padding: 0 20px;
+                    margin: 0;
+                    width: 40%
+                }
             }
             .right__h2 {
                 @include m.h2;
                 color: v.$color-primary;
                 max-width: 300px;
                 margin: 0 auto;
-                margin-bottom: 30px
+                margin-bottom: 30px;
+                @include b.breakpoint(large) {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid v.$color-primary;
+                }
             }
             .right__p {
                 @include m.p;
                 margin: 0 auto;
                 margin-bottom: 30px;
-                max-width: 600px
+                max-width: 600px;
             }
             .right__btn {
                 display: flex;
@@ -59,6 +92,15 @@
                 max-width: 300px;
                 margin: 0 auto;
                 gap: 10px;
+                @include b.breakpoint(large) {
+                    flex-direction: row;
+                    max-width: 500px;
+                    justify-content: center;
+                    align-items: center;
+                    .btn {
+                        width: 180px
+                    }
+                }
             }
         }
     }
@@ -69,10 +111,15 @@
     &__h2 {
         @include m.h2;
         color: v.$color-white;
+        padding-bottom: 10px;
+        border-bottom: 2px solid v.$color-primary;
     }
     &__video {
         width: 90%;
         min-height: 200px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        @include b.breakpoint(large) {
+            width: 60%;
+        }
     }
 }

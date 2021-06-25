@@ -1,25 +1,43 @@
 @use '../variables/colors-theme' as v;
 @use '../variables/typography' as t;
 @use '../variables/mixins' as m;
+@use '../variables/layout' as b;
 
 .howto {
     @include m.content;
     background-color: v.$color-white;
     padding-top: 70px;
     padding-bottom: 50px;
+    
+    &__content {
+        @include b.breakpoint(large) {
+            display: flex;
+        }
+    }
     &__h2 {
         @include m.h2;
         max-width: 400px;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 40px auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid v.$color-black;
     }
     .howto__img {
-        width: 100%;
+        width: 50%;
     }
     .mobile-img {
         display: block;
         width: 200px;
         height: auto;
         margin: 0 auto;
+        @include b.breakpoint(large) {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+    }
+    .__img {
+        @include b.breakpoint(large) {
+            width: 100%;
+        }
     }
     .accordion {
         box-shadow: 3px 3px 0px 0px rgba($color: #000, $alpha: 0.3);

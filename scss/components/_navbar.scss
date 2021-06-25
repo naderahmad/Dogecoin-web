@@ -112,8 +112,12 @@
             font-family: t.$font-secondary;
             font-size: t.$font-size-xmedium;
             text-decoration: none;
+
             @include b.breakpoint(xlarge) {
                 font-size: t.$font-size-medium;
+            }
+            &:hover {
+                border-bottom: 1px solid v.$color-primary;
             }
         }
     }
