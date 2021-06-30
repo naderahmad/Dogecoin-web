@@ -21,8 +21,11 @@
     }
     &__video {
         width: 100%;
-        max-width: 60vw;
+        max-width: 70vw;
         margin-top: 3rem;
+        @include m.breakpoint(large) {
+            max-width: 40%;
+        }
     }
     .community {
         @include m.breakpoint(large) {

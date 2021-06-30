@@ -39,10 +39,12 @@
             width: 100vw;
             margin: 0;
             padding: 0;
-            z-index: 1;
+            z-index: -1;
             text-align: center;
             transition: top .2s ease;
-
+            @include m.breakpoint(large) {
+                z-index: 1;
+            }
             @include m.breakpoint(large) {
                 @include m.flexbox(flex-start, center, nowrap);
                 position: relative;
@@ -71,15 +73,51 @@
             }
         }
         .dropdown--nav {
-            .dropdown__list--navbar {
+            position: relative;
+            display: inline-block;
+            &-content {
                 display: none;
+                position: absolute;
+                right: 1%;
+                background-color: v.$color-black;
+                min-width: 20rem;
+                margin-top: .5rem;
+                border-radius: .2rem;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            &-content a {
+                color: v.$color-white;
+                font-size: clamp(1.4rem, 3vw, 1.8rem);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            & a:hover {
+                background-color: v.$color-s;
+                color: v.$color-black;
             }
         }
+        .show {
+            display: block;
+        }
         &__btn {
+            position: absolute;
+            top: 1rem;
             cursor: pointer;
             @include m.breakpoint(large) {
                 display: none;
             }
+        }
+    }
+    .burger {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        @include m.breakpoint(large) {
+            display: none;
         }
     }
     .btn__burger {
@@ -123,8 +161,9 @@
         transform: rotate(-45deg) translate(3px, 5px);
     }
     .navbar__list.open {
-        top: 6vh;
-        padding: 5rem 0;
+        top: 0;
+        height: 15vh;
+        padding: 15rem 0;
         transition: top .5s ease;
     }
     &.sticky {

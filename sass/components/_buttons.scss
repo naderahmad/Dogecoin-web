@@ -29,6 +29,16 @@
     border: none;
     cursor: pointer;
 }
+.dropbtn--nav {
+    @extend .btn;
+    font-family: v.$font-s;
+    font-weight: 300;
+    width: 12rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 // Icons Buttons
 .icon--outline {
@@ -64,5 +74,13 @@
 }
 .dropbtn:hover {
     transform: scale(1.02);
+    transition: all .1s ease;
+}
+.dropbtn--nav:hover {
+    background-color: transparent;
+    transform: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid v.$color-p;
     transition: all .1s ease;
 }

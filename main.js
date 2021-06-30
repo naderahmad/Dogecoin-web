@@ -1,9 +1,10 @@
 // Navbar button burger
+const burger = document.querySelector('.burger');
 const menuBtn = document.querySelector('.navbar__btn');
 const menuburger = document.querySelector('.navbar__list');
 let menuOpen = false;
 
-menuBtn.addEventListener('click', () => {
+burger.addEventListener('click', () => {
     if(!menuOpen) {
         menuBtn.classList.add('open');
         menuburger.classList.add('open');
@@ -55,7 +56,7 @@ function dropdown_2() {
   document.getElementById("myDropdown-2").classList.toggle("show");
 }
 function dropdown_3() {
-  document.getElementById("myDropdown-2").classList.toggle("show");
+  document.getElementById("myDropdown-3").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
