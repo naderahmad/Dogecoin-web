@@ -1,0 +1,68 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.btn {
+    @include m.flexbox(center, center, nowrap);
+    background-color: v.$color-p;
+    padding: v.$padding-btn;
+    color: v.$color-white;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    font-weight: 500;
+    border: 1px solid v.$color-p;
+    border-radius: v.$radius;
+    outline: none;
+}
+.btn--outline {
+    @extend .btn;
+    background-color: transparent;
+}
+.btn--blank {
+    @extend .btn;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.dropbtn {
+    @extend .btn;
+    width: 20rem;
+    border: none;
+    cursor: pointer;
+}
+
+// Icons Buttons
+.icon--outline {
+    font-size: v.$size-medium;
+    color: v.$color-p;
+    margin-right: 10px;
+}
+.btn__icon {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+.btn__icon--com {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: v.$color-black;
+}
+
+// Hover Buttons
+.btn:hover,
+.btn:active {
+    background-color: v.$color-s;
+    transform: scale(1.02);
+    transition: all .1s ease;
+}
+.btn--outline:hover,
+.btn--outline:active {
+    background-color: v.$color-black;
+}
+.btn--blank:hover {
+    background-color: transparent;
+    color: v.$color-p;
+    transform: none;
+}
+.dropbtn:hover {
+    transform: scale(1.02);
+    transition: all .1s ease;
+}

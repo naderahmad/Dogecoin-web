@@ -1,0 +1,135 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.header {
+    @include m.flexbox(space-between, center, nowrap);
+    padding: 4rem 4rem;
+    position: fixed;
+    width: calc(100vw - 9.7rem);
+    z-index: 200;
+
+    &__logo {
+        @include m.flexbox(space-between, center, nowrap);
+        
+        .logo__text {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            text-transform: uppercase;
+            font-weight: bold;
+            color: v.$color-white;
+            margin-left: 10px;
+            &:hover {
+                color: v.$color-s;
+                transition: all .1s ease;
+            }
+        }
+    }
+    .navbar {
+        @include m.breakpoint(large) {
+            width: auto;
+        }
+
+        &__list {
+            position: fixed;
+            top: -100vh;
+            left: 0;
+            @include m.flexbox(flex-start, center, nowrap);
+            flex-direction: column;
+            list-style: none;
+            background-color: v.$color-black;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            text-align: center;
+            transition: top .2s ease;
+
+            @include m.breakpoint(large) {
+                @include m.flexbox(flex-start, center, nowrap);
+                position: relative;
+                flex-direction: row;
+                top: 0;
+                width: auto;
+                background-color: transparent;
+            }
+            .list__item {
+                margin-bottom: 20px;
+                @include m.breakpoint(large) {
+                    margin-right: 30px;
+                    margin-bottom: 0;
+                }
+                .item__link {
+                    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+                    &:hover {
+                        border-bottom: 1px solid v.$color-p;
+                        padding-bottom: 5px;
+                        transition: all .1s ease;
+                    }
+                }
+            }
+            .icon--outline {
+                color: v.$color-white;
+            }
+        }
+        .dropdown--nav {
+            .dropdown__list--navbar {
+                display: none;
+            }
+        }
+        &__btn {
+            cursor: pointer;
+            @include m.breakpoint(large) {
+                display: none;
+            }
+        }
+    }
+    .btn__burger {
+        width: 20px;
+        height: 2px;
+        background-color: v.$color-white;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        @include m.breakpoint(large) {
+            display: none;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: v.$color-white;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+        }
+        &::before {
+            transform: translateY(-6px);
+        }
+        &::after {
+            transform: translateY(6px);
+        }
+    }
+    // Animation burger
+    .navbar__btn.open .btn__burger {
+        transform: translateX(-5px);
+        background: transparent;
+    }
+    .navbar__btn.open .btn__burger::before {
+        transform: rotate(45deg) translate(5px, -3px);
+    }
+    .navbar__btn.open .btn__burger::after {
+        transform: rotate(-45deg) translate(3px, 5px);
+    }
+    .navbar__list.open {
+        top: 6vh;
+        padding: 5rem 0;
+        transition: top .5s ease;
+    }
+    &.sticky {
+        background-color: v.$color-black;
+        top: 0;
+        padding: 2rem 4rem;
+    }
+}

@@ -1,0 +1,85 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.about {
+    padding: 7rem 4rem;
+
+    .about__content {
+        text-align: center;
+        color: v.$color-white;
+    }
+    &__h2 {
+        color: v.$color-white;
+        border-bottom: 2px solid v.$color-p;
+        padding-bottom: 1.5rem;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    &__p {
+        max-width: 70rem;
+        margin: 3rem auto 0 auto;
+    }
+    &__video {
+        width: 100%;
+        max-width: 60vw;
+        margin-top: 3rem;
+    }
+    .community {
+        @include m.breakpoint(large) {
+            @include m.flexbox(center, flex-start, nowrap);
+            flex-direction: row;
+            gap: 5rem;
+        }
+        &__left {
+            .left__h2 {
+                border-bottom: 1px solid v.$color-p;
+                padding-bottom: 1rem;
+                max-width: 40rem;
+                margin: 3rem auto 0 auto;
+            }
+            .left__p {
+                margin: 3rem auto 3rem auto;
+                max-width: 50rem;
+            }
+            .left__btn {
+                @include m.flexbox(center, center, wrap);
+                max-width: 30rem;
+                gap: 1rem;
+                margin: 0 auto;
+                @include m.breakpoint(large) {
+                    @include m.flexbox(center, center, nowrap);
+                    flex-direction: column;
+                    gap: .8rem;
+                }
+                .btn {
+                    width: 100%;
+                    max-width: 220px;
+                    color: v.$color-black;
+                }
+            }
+        }
+        &__right {
+            .right__h2 {
+                border-bottom: 1px solid v.$color-p;
+                padding-bottom: 1rem;
+                max-width: 40rem;
+                margin: 3rem auto 0 auto;
+            }
+            .right__p {
+                margin: 3rem auto 3rem auto;
+                max-width: 50rem;
+            }
+            .right__btn {
+                @include m.flexbox(center, center, wrap);
+                gap: 1rem;
+                max-width: 30rem;
+                margin: 0 auto;
+                .btn {
+                    width: 100%;
+                    max-width: 220px;
+                    color: v.$color-black;
+                }
+            }
+        }
+    }
+}

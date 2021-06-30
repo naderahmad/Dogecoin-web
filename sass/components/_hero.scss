@@ -1,0 +1,157 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.hero {
+    position: relative;
+    padding: 0 4rem;
+    height: 100vh;
+    backdrop-filter: blur(.3rem);
+
+    &__container {
+        @include m.flexbox(center, center, nowrap);
+        flex-direction: column-reverse;
+        height: 90vh;
+        @include m.breakpoint(large) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .content {
+            max-width: 500px;
+            @include m.breakpoint(large) {
+                max-width: 520px;
+            }
+
+            &__title {
+                font-size: clamp(3.4rem, 6vw, 6.7rem);
+                color: v.$color-white;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 20px;
+                @include m.breakpoint(large) {
+                    text-align: left;
+                }
+            }
+            &__p {
+                font-family: v.$font-s;
+                color: v.$color-grey;
+                text-align: center;
+                margin-bottom: 30px;
+                @include m.breakpoint(large) {
+                    text-align: left;
+                }
+            }
+            &__btn {
+                @include m.flexbox(center, center, wrap);
+                flex-direction: column;
+                gap: 10px;
+                @include m.breakpoint(medium) {
+                    flex-direction:row;
+                    flex-wrap: nowrap;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+                @include m.breakpoint(large) {
+                    margin: 0;
+                }
+
+                .btn {
+                    width: 80%;
+                    color: v.$color-black;
+                    text-align: center;
+                }
+                .btn--outline {
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &__img-container {
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+        .img-container__img {
+            width: 100px;
+            height: 100px;
+            @include m.breakpoint(large) {
+                width: 400px;
+                height: 400px;
+                margin: 0 0 0 50px;
+            }
+        }
+    }
+    .blur-1 {
+        position: absolute;
+        background: rgba($color: v.$color-s, $alpha: 0.7);
+        filter: blur(10rem);
+        width: 15rem;
+        height: 15rem;
+        z-index: -1;
+        left: calc(50% - 8rem);
+        top: 20rem;
+        @include m.breakpoint(large) {
+            left: calc(20% - 8rem);
+            top: 25%;
+        }
+    }
+    .blur-2 {
+        @extend .blur-1;
+        display: none;
+        @include m.breakpoint(medium) {
+            display: block;
+            left: calc(10% - 8rem);
+            background: rgba($color: v.$color-s, $alpha: 0.3);
+            top: 70%;
+        }
+    }
+    .blur-3 {
+        @extend .blur-1;
+        display: none;
+        @include m.breakpoint(large) {
+            display: block;
+            left: calc(100% - 30rem);
+            background: rgba($color: v.$color-s, $alpha: 0.7);
+            top: 20%;
+        }
+    }
+    &__scroll {
+        z-index: 2;
+
+        .scroll__middle {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .scroll__mouse {
+            width: 20px;
+            height: 35px;
+            border: 1px solid v.$color-white;
+            border-radius: 60px;
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                bottom: 20px;
+                background: v.$color-white;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+                opacity: 1;
+                animation: mouse 1.2s infinite;
+            }
+            // animation scroll mouse
+            @keyframes mouse {
+                from {
+                    opacity: 1;
+                    bottom: 20px;
+                } to {
+                    opacity: 0;
+                    bottom: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,13 +1,16 @@
 // Navbar button burger
 const menuBtn = document.querySelector('.navbar__btn');
+const menuburger = document.querySelector('.navbar__list');
 let menuOpen = false;
 
 menuBtn.addEventListener('click', () => {
     if(!menuOpen) {
         menuBtn.classList.add('open');
+        menuburger.classList.add('open');
         menuOpen = true;
     } else {
         menuBtn.classList.remove('open');
+        menuburger.classList.remove('open');
         menuOpen = false;
     }
 });
@@ -40,3 +43,48 @@ window.addEventListener("scroll", function() {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
 })
+
+// Dropdown
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function dropdown_1() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+function dropdown_2() {
+  document.getElementById("myDropdown-2").classList.toggle("show");
+}
+function dropdown_3() {
+  document.getElementById("myDropdown-2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+//Accordion
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}

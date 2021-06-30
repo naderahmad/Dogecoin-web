@@ -1,0 +1,70 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.wallets {
+    background-color: v.$color-white;
+    padding: 7rem 4rem;
+
+    &__content {
+        .wallets__text {
+            text-align: center;
+        }
+    }
+    &__h2 {
+        border-bottom: 2px solid v.$color-p;
+        padding-bottom: 1.5rem;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    &__p {
+        max-width: 100rem;
+        margin: 3rem auto 0 auto;
+    }
+    &__options {
+        text-align: center;
+        @include m.breakpoint(medium) {
+            @include m.flexbox(center, center, wrap);
+            gap: 15rem;
+            margin-top: 3rem;
+        }
+    }
+    &__title-1 {
+        margin-bottom: 2rem;
+    }
+    &__img-1 {
+        filter: drop-shadow(3px 3px 5px v.$color-black);
+        margin-bottom: 2rem;
+    }
+    &__btn {
+        margin: 0 auto;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        &-content {
+            display: none;
+            position: absolute;
+            background-color: v.$color-black;
+            min-width: 20rem;
+            margin-top: .5rem;
+            border-radius: .2rem;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        &-content a {
+            color: v.$color-white;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        & a:hover {
+            background-color: v.$color-s;
+            color: v.$color-black;
+        }
+    }
+    .show {
+        display: block;
+    }
+}

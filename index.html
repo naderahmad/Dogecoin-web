@@ -12,23 +12,24 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <!-- start Button to Top -->
-    <button onclick="topFunction()" id="toTop"><i class="fas fa-arrow-up"></i></button>
-    <!-- end Button to top -->
+    <!-- Start Button to Top -->
+    <button onclick="topFunction()" id="toTop" class="toTop"><i class="fas fa-arrow-up"></i></button>
+    <!-- End Button to top -->
     <header class="header">
-        <div class="navbar__logo">
+        <div class="header__logo">
             <img src="./assets/images/logo-sm.png" alt="logo dogecoin" class="logo__img">
             <a href="#" class="logo__text">Dogecoin</a>
         </div>
         <nav class="navbar">
             <ul class="navbar__list">
-                <li class="navbar__item"><a href="#wallets" class="navbar__link">Wallets</a></li>
-                <li class="navbar__item"><a href="#about" class="navbar__link">What is Dogecoin?</a></li>
-                <li class="navbar__item"><a href="#start" class="navbar__link">Get Started Now</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Guide</a></li>
+                <li class="list__item"><a href="#wallets" class="item__link">Wallets</a></li>
+                <li class="list__item"><a href="#about" class="item__link">What is Dogecoin?</a></li>
+                <li class="list__item"><a href="#start" class="item__link">Get Started Now</a></li>
+                <li class="list__item"><a href="#" class="item__link">Guide</a></li>
+                <li class="list__item"><a href="#" class="item__link">FAQ</a></li>
                 <div class="dropdown--nav">
-                    <button class="navbar__link btn--blank">
-                        <i class="fas fa-globe-americas"></i> 
+                    <button onclick="dropdown_1()" class="item__link btn--blank">
+                        <i class="icon--outline fas fa-globe-americas"></i>  
                         <i class="fas fa-angle-down"></i>
                     </button>
                     <ul class="dropdown__list dropdown__list--navbar">
@@ -61,23 +62,23 @@
         <!-- START SECTION HERO -->
         <section class="hero" id="hero">
             <div class="hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title">Dogecoin<br><span>to the moon</span></h1>
-                    <p class="hero__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
-                    <div class="hero__btn">
+                <div class="content">
+                    <h1 class="content__title">Dogecoin<br><span>to the moon</span></h1>
+                    <p class="content__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
+                    <div class="content__btn">
                         <a href="#start" class="btn">Get Started</a>
-                        <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn btn--outline"><i class="btn__icon fab fa-github"></i> Source</a>
+                        <a href="https://github.com/dogecoin/dogecoin" target="_blank" rel="noopener" class="btn--outline"><i class="icon--outline fab fa-github"></i> Source</a>
                     </div>
                 </div>
                 <div class="hero__img-container">
-                    <img class="hero__img" src="./assets/images/logo.png" alt="logo dogecoin">
+                    <img class="img-container__img" src="./assets/images/logo.png" alt="logo dogecoin">
                 </div>
             </div>
             <!-- start background circle blur -->
-            <div class="radialFx-1"></div>
-            <div class="radialFx-2"></div>
-            <div class="radialFx-3"></div>
-            <div class="radialFx-4"></div>
+            <div class="blur-1"></div>
+            <div class="blur-2"></div>
+            <div class="blur-3"></div>
+            <div class="blur-4"></div>
             <!-- end background circle blur -->
             <div class="hero__scroll">
                 <!-- start scroll icon animation -->
@@ -101,13 +102,12 @@
                         <img src="./assets/images/multidoge.png" alt="multidoge wallet logo" class="wallets__img-1">
                         <div class="wallets__btn">
                             <div class="dropdown">
-                                <button class="btn btn--os">Select OS <i class="btn__icon--p-os fas fa-chevron-down"></i></button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__item dropdown__link--disabled">Cerrar</li>
-                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-windows"></i> Windows</a></li>
-                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-linux"></i> Linux</a></li>
-                                    <li class="dropdown__item"><a href="#" target="_blank" rel="noopener" class="dropdown__link"><i class="fab fa-apple"></i> Mac OS</a></li>
-                                </ul>
+                                <button onclick="dropdown_1()" class="dropbtn">Select OS <i class="btn__icon fas fa-chevron-down"></i></button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="https://multidoge.org/?dl=win" target="_blank" rel="noopener"><i class="fab fa-windows"></i> Windows</a>
+                                    <a href="https://multidoge.org/?dl=lin" target="_blank" rel="noopener"><i class="fab fa-linux"></i> Linux</a>
+                                    <a href="https://multidoge.org/?dl=osx" target="_blank" rel="noopener"><i class="fab fa-apple"></i> Mac OS</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,15 +116,14 @@
                         <img src="./assets/images/dogecoin-w.png" alt="multidoge wallet logo" class="wallets__img-1">
                         <div class="wallets__btn">
                             <div class="dropdown">
-                                <button class="btn btn--os">Select OS <i class="btn__icon--p-os fas fa-chevron-down"></i></button>
-                                <ul class="dropdown__list">
-                                    <li class="dropdown__item dropdown__link--disabled">Cerrar</li>
-                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win32-setup-unsigned.exe" class="dropdown__link"><i class="fab fa-windows"></i> Windows x32</a></li>
-                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win64-setup-unsigned.exe" class="dropdown__link"><i class="fab fa-windows"></i> Windows x64</a></li>
-                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-i686-pc-linux-gnu.tar.gz" class="dropdown__link"><i class="fab fa-linux"></i> Linux x32</a></li>
-                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-x86_64-linux-gnu.tar.gz" class="dropdown__link"><i class="fab fa-linux"></i> Linux x64</a></li>
-                                    <li class="dropdown__item"><a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-osx.dmg" class="dropdown__link"><i class="fab fa-apple"></i> Mac OS</a></li>
-                                </ul>
+                                <button onclick="dropdown_2()" class="dropbtn">Select OS <i class="btn__icon fas fa-chevron-down"></i></button>
+                                <div id="myDropdown-2" class="dropdown-content">
+                                    <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win32-setup-unsigned.exe"><i class="fab fa-windows"></i> Windows x32</a>
+                                    <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win64-setup-unsigned.exe"><i class="fab fa-windows"></i> Windows x64</a>
+                                    <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-i686-pc-linux-gnu.tar.gz"><i class="fab fa-linux"></i> Linux x32</a>
+                                    <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-x86_64-linux-gnu.tar.gz"><i class="fab fa-linux"></i> Linux x64</a>
+                                    <a href="https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-osx.dmg"><i class="fab fa-apple"></i> Mac OS</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,20 +131,20 @@
             </div>
         </section>
         <!-- END SECTION WALLETS -->
-        <!-- START SECTION WHAT IS DOGECOIN? -->
-        <section class="whatis" id="about">
-            <div class="whatis__content">
-                <h2 class="whatis__h2">What is Dogecoin?</h2>
-                <p class="whatis__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
-                <video class="whatis__video" src="./assets/video/dogecoin.mp4" controls></video>
+        <!-- START SECTION ABOUT -->
+        <section class="about" id="about">
+            <div class="about__content">
+                <h2 class="about__h2">What is Dogecoin?</h2>
+                <p class="about__p">Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.</p>
+                <video class="about__video" src="./assets/video/dogecoin.mp4" controls></video>
                 <div class="community">
                     <div class="community__left">
                         <h3 class="left__h2">The fun and friendly Internet currency</h3>
                         <p class="left__p">Dogecoin sets itself apart from other digital currencies with an amazing, vibrant community made up of friendly folks just like you.</p>
                         <div class="left__btn">
-                            <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Reddit Community</a>
-                            <a href="https://discord.gg/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-discord"></i>Discord Community</a>
-                            <a href="https://www.reddit.com/r/dogeducation/" target="_blank" rel="noopener" class="btn"><i class="btn__icon btn__icon--com fab fa-reddit"></i>Dogeducation Reddit</a>
+                            <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon--com fab fa-reddit"></i>Reddit Community</a>
+                            <a href="https://discord.gg/dogecoin" target="_blank" rel="noopener" class="btn"><i class="btn__icon--com fab fa-discord"></i>Discord Community</a>
+                            <a href="https://www.reddit.com/r/dogeducation/" target="_blank" rel="noopener" class="btn"><i class="btn__icon--com fab fa-reddit"></i>Dogeducation Reddit</a>
                         </div>
                     </div>
                     <div class="community__right">
@@ -159,55 +158,43 @@
                 </div>
             </div>
         </section>
-        <!-- END SECTION WHAT IS DOGECOIN? -->
+        <!-- END SECTION ABOUT -->
         <!-- START SECTION START -->
-        <section class="howto" id="start">
-            <h2 class="howto__h2">How to get started with Dogecoin</h2>
-            <div class="howto__content">
-                <div class="howto__img">
-                    <img class="mobile-img" src="./assets/images/phone.png" alt="mobile wallet screenshot">
-                </div>
-                <div class="accordion">
-                    <div class="accordion__item-1">
-                        <input type="checkbox" checked name="example_accordion" class="accordion__input">
-                        <label for="section1" class="accordion__label">1 ) Choose your Wallet</label>
-                        <div class="accordion__content">
-                            <p class="accordion__p"> 
-                            Pick a Wallet from our <a href="#wallets" class="btn btn--howto">Wallet Section</a>
+        <section class="start" id="start">
+            <div class="start__content">
+                <h2 class="start__h2">How to get started with Dogecoin</h2>
+                <div class="accordion__container">
+                    <button class="accordion">1 ) Choose your Wallet</button>
+                    <div class="panel">
+                        <p class="accordion__p"> 
+                            Pick a Wallet from our <a href="#wallets" class="btn">Wallet Section</a>
                             A Wallet is used for holding your Dogecoins directly on your Computer/Smartphone.
-                            </p>
-                        </div>
+                        </p>
                     </div>
-                    <div class="accordion__item-2">
-                        <input type="checkbox" name="example_accordion" id="section2" class="accordion__input">
-                        <label for="section2" class="accordion__label">2 ) Configure your Wallet</label>
-                        <div class="accordion__content">
-                            <p class="accordion__p"> 
-                                After downloading, you can configure your Wallet according to our <a href="#" class="btn btn--howto">Guide</a>
-                            </p>
-                        </div>
+                    <button class="accordion">2 ) Configure your Wallet</button>
+                    <div class="panel">
+                        <p class="accordion__p"> 
+                            After downloading, you can configure your Wallet according to our <a href="#" class="btn">Guide</a>
+                        </p>
                     </div>
-                    <div class="accordion__item-3">
-                        <input type="checkbox" name="example_accordion" id="section3" class="accordion__input">
-                        <label for="section3" class="accordion__label">3 ) Get Some Dogecoin</label>
-                        <div class="accordion__content">
-                            <p class="accordion__p"> 
-                                There are numerous amounts of ways to get Dogecoin. You can buy them, trade for them, get tipped, "mine" them, and more. They are surprisingly endless!
-                  
-                                You can get tipped Dogecoin by participating in <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn btn--howto">Our community</a> If that's not your style, another way to have your first Dogecoin is to participate at Dogecoin Folding@Home.
-                        
-                                <a href="https://www.dogecoinfah.com/" target="_blank" rel="noopener" class="btn btn--howto">Folding@Home (FaH)</a> is a distributed computing project. You can join team dogefolders, bring in your computing power, help to find cures for diseases and receive some Doges for your efforts.
-                            </p>
-                        </div>
+                    <button class="accordion">3 ) Get Some Dogecoin</button>
+                    <div class="panel">
+                        <p class="accordion__p"> 
+                            There are numerous amounts of ways to get Dogecoin. You can buy them, trade for them, get tipped, "mine" them, and more. They are surprisingly endless!
+            
+                            You can get tipped Dogecoin by participating in <a href="https://www.reddit.com/r/dogecoin" target="_blank" rel="noopener" class="btn">Our community</a> If that's not your style, another way to have your first Dogecoin is to participate at <a class="link--accordion" href="https://www.dogecoinfah.com/" target="_blank" rel="noopener">Dogecoin Folding@Home</a>.
+                    
+                            <a href="https://www.dogecoinfah.com/" target="_blank" rel="noopener" class="btn">Folding@Home (FaH)</a> is a distributed computing project. You can join team dogefolders, bring in your computing power, help to find cures for diseases and receive some Doges for your efforts.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- END SECTION START -->
-        <!-- START SECTION GET WALLET-->
-        <section class="get-wallet" id="social">
-            <div class="get-wallet__content">
-                <div class="social">
+        <!-- START SECTION SOCIAL-->
+        <section class="social" id="social">
+            <div class="social__content">
+                <div class="social__icons">
                     <a href="https://www.facebook.com/OfficialDogecoin/" aria-label="Facebook" target="_blank" rel="noopener"><i class="social__icon fab fa-facebook-square"></i></a>
                     <a href="https://twitter.com/dogecoin" aria-label="Twitter" target="_blank" rel="noopener"><i class="social__icon fab fa-twitter-square"></i></a>
                     <a href="https://www.reddit.com/r/dogecoin" aria-label="Reddit" target="_blank" rel="noopener"><i class="social__icon fab fa-reddit-square"></i></a>
@@ -215,13 +202,13 @@
                 </div>
             </div>
         </section>
-        <!-- END SECTION GET WALLET -->
+        <!-- END SECTION SOCIAL -->
         <!-- START FOOTER -->
         <footer class="footer" id="footer">
             <div class="footer__content">
                 <p class="footer__p">
                     Copyright © The Ðogecoin Project 2021
-                    Created by <a href="https://ummjackson.com/" target="_blank" rel="noopener">Jackson Palmer</a> & <a href="https://twitter.com/BillyM2k" target="_blank" rel="noopener">Shibetoshi Nakamoto</a>. Website Design by <a href="https://github.com/naderahmad/Dogecoin-web" target="_blank" rel="noopener"> NaderAhmad</a>. Logo by <a href="#">Christine Ricks</a>.
+                    Created by <a href="https://ummjackson.com/" target="_blank" rel="noopener">Jackson Palmer</a> & <a href="https://twitter.com/BillyM2k" target="_blank" rel="noopener">Shibetoshi Nakamoto</a>. Website Design by <a href="https://github.com/naderahmad" target="_blank" rel="noopener"> NaderAhmad</a>. Logo by <a href="http://christinemix.com/">Christine Ricks</a>.
                 </p>
             </div>
         </footer>

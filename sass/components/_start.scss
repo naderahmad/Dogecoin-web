@@ -1,0 +1,71 @@
+@use '../variables' as v;
+@use './mixins' as m;
+
+.start {
+    background-color: v.$color-white;
+    padding: 7rem 4rem;
+
+    &__content {
+        text-align: center;
+    }
+    .content__accordion {
+        @include m.flexbox(center, center, nowrap);
+    }
+    &__h2 {
+        border-bottom: 2px solid v.$color-p;
+        padding-bottom: 1.5rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    &__img {
+        .mobile-img {
+            width: 100px;
+        }
+    }
+    .accordion {
+        background-color: v.$color-p;
+        font-family: v.$font-s;
+        color: v.$color-black;
+        cursor: pointer;
+        padding: 1.8rem;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+        font-weight: bold;
+        border-bottom: 1px solid v.$color-s;
+        transition: 0.4s;
+        @include m.breakpoint(large) {
+            max-width: 90rem;
+        }
+
+        &__container {
+            @include m.flexbox(center, center, wrap);
+            flex-direction: column;
+            padding-top: 4rem;
+        }
+        &__p {
+            max-width: 70rem;
+            margin: 0 auto;
+            .btn {
+                max-width: 20rem;
+                margin: 2rem auto;
+            }
+        }
+      }
+      
+      .active, .accordion:hover {
+        background-color: v.$color-s; 
+      }
+      
+      .panel {
+        padding: 4rem 5rem;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        .link--accordion {
+            color: v.$color-p;
+        }
+      }
+}

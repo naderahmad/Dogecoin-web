@@ -1,8 +1,8 @@
-// breakPoints
+// BreakPoints
 $breakpoints: (
     small: 499px,
     medium: 768px,
-    large: 1024px,
+    large: 992px,
     xlarge: 1200px
 );
 
@@ -12,4 +12,12 @@ $breakpoints: (
     @media screen and (min-width: $breakpoint-value) {
         @content;
     }
+}
+
+// Flex Box
+@mixin flexbox($justify, $align, $wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
 }

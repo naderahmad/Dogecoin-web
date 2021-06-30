@@ -1,0 +1,37 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.title, .subtitle {
+  color: #FFF;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: auto;
+}
+
+.subtitle {
+  color: #201F1F;
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+span {
+  font-weight: normal;
+}
